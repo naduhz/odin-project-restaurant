@@ -8,7 +8,6 @@ const content = document.querySelector("#content");
 //TODO: Header
 content.append(header());
 
-//TODO: Body
 content.append(body());
 
 //TODO: Footer
