@@ -3,7 +3,9 @@ import { header } from "./components/header.js";
 import { body } from "./components/body.js";
 import { footer } from "./components/footer.js";
 
-const content = document.querySelector("#content");
+const content = document.createElement("div");
+content.id = "content";
+document.body.appendChild(content);
 
 //TODO: Header
 content.append(header());
