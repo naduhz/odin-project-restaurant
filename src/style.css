@@ -2,6 +2,7 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./assets/body-background.jpg");
   background-size: cover;
+  min-width: 1280px;
 }
 
 h3 {
@@ -9,10 +10,6 @@ h3 {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 20px;
   color: #fff;
-}
-
-header {
-  border: 1px solid black;
 }
 
 .header-logo {
@@ -28,6 +25,38 @@ header {
   width: 186px;
   z-index: 3;
   cursor: pointer;
+}
+
+#menuButton,
+#contactButton {
+  background-color: #008345;
+  margin: 15px;
+  font-size: 14px;
+  padding: 10px 35px;
+  z-index: 3;
+  position: fixed;
+  top: 15px;
+}
+
+#menuButton {
+  right: 200px;
+}
+
+#contactButton {
+  right: 0px;
+}
+
+@media all and (max-width: 1080px) {
+  #menuButton,
+  #contactButton {
+    display: none;
+  }
+}
+
+#menuButton:hover,
+#contactButton:hover {
+  background-color: #fff;
+  color: rgb(180, 5, 5);
 }
 
 section.body {
