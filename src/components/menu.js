@@ -1,12 +1,9 @@
 import middleImage from "../assets/Middle2.png";
 
-export function body() {
+export function menu() {
   const bodyElement = document.createElement("section");
   bodyElement.className = "body";
-
-  const imageContainer = new Image();
-  imageContainer.src = middleImage;
-  bodyElement.appendChild(imageContainer);
+  bodyElement.id = "body";
 
   const subText = document.createElement("h3");
   subText.textContent = `Any sizes*, Any Pizza Category, Everyday*, All Day!`;

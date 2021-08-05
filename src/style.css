@@ -2,7 +2,6 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./assets/body-background.jpg");
   background-size: cover;
-  min-width: 1280px;
 }
 
 h3 {
@@ -27,6 +26,7 @@ h3 {
   cursor: pointer;
 }
 
+#homeButton,
 #menuButton,
 #contactButton {
   background-color: #008345;
@@ -38,8 +38,12 @@ h3 {
   top: 15px;
 }
 
+#homeButton {
+  right: 327px;
+}
+
 #menuButton {
-  right: 200px;
+  right: 191px;
 }
 
 #contactButton {
@@ -47,12 +51,14 @@ h3 {
 }
 
 @media all and (max-width: 1080px) {
+  #homeButton,
   #menuButton,
   #contactButton {
     display: none;
   }
 }
 
+#homeButton:hover,
 #menuButton:hover,
 #contactButton:hover {
   background-color: #fff;
