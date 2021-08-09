@@ -1,8 +1,8 @@
-const foodItem = (name, description, image, rating) => {
-  const name = this.name;
-  const description = this.description;
-  const image = this.image;
-  const rating = this.rating;
+const foodItem = (name, description, img_src, rating) => {
+  const img = new Image();
+  img.src = img_src;
 
-  return { name, description, image, rating };
+  return { name, description, img, rating };
 };
+
+export default foodItem;
