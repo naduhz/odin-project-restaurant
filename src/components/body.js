@@ -1,6 +1,5 @@
-import pepperoniImg from "../assets/food/pepperoni-pizza.jpg";
+import { pepperoniPizza, hawaiianPizza, veganPizza } from "../menu/food";
 import middleImage from "../assets/Middle2.png";
-import foodItem from "../menu/food";
 
 export function home() {
   const bodyElement = document.createElement("section");
@@ -25,14 +24,7 @@ export function home() {
 }
 
 export function menu() {
-  const pepperoniPizza = foodItem(
-    "Pepperoni Pizza",
-    "Red base topped with spicy salami (contains beef and pork)",
-    pepperoniImg,
-    4.0
-  );
-
-  const allImages = [pepperoniPizza.img];
+  const allImages = [pepperoniPizza.img, hawaiianPizza.img, veganPizza.img];
 
   const bodyElement = document.createElement("section");
   bodyElement.className = "body menu";
@@ -40,7 +32,7 @@ export function menu() {
 
   const menuImages = document.createElement("div");
   menuImages.id = "menuImages";
-  bodyElement.appendChild(allImages[0]);
+  bodyElement.appendChild(allImages);
 
   const orderButton = document.createElement("a");
   orderButton.className = "genericButton";
