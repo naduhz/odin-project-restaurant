@@ -30,4 +30,6 @@ const veganPizza = foodItem(
   3.5
 );
 
-export { pepperoniPizza, hawaiianPizza, veganPizza };
+const foods = [pepperoniPizza, hawaiianPizza, veganPizza];
+
+export { foods };

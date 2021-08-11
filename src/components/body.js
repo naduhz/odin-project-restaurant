@@ -1,4 +1,4 @@
-import { pepperoniPizza, hawaiianPizza, veganPizza } from "../menu/food";
+import { foods } from "../menu/food";
 import middleImage from "../assets/Middle2.png";
 
 export function home() {
@@ -24,21 +24,19 @@ export function home() {
 }
 
 export function menu() {
-  const allImages = [pepperoniPizza.img, hawaiianPizza.img, veganPizza.img];
-
   const bodyElement = document.createElement("section");
   bodyElement.className = "body menu";
   bodyElement.id = "body";
 
-  const menuImages = document.createElement("div");
-  menuImages.id = "menuImages";
-  bodyElement.appendChild(allImages);
-
-  const orderButton = document.createElement("a");
-  orderButton.className = "genericButton";
-  orderButton.id = "orderButton";
-  orderButton.textContent = `ORDER NOW!`;
-  bodyElement.appendChild(orderButton);
+  for (let i = 0; i < foods.length; i++) {
+    const imageWrapper = document.createElement("div");
+    imageWrapper.className = "imageWrapper";
+    const image = foods[i].img;
+    image.style.width = "100%";
+    image.style.height = "100%";
+    imageWrapper.appendChild(foods[i].img);
+    bodyElement.appendChild(imageWrapper);
+  }
 
   return bodyElement;
 }
