@@ -29,13 +29,22 @@ export function menu() {
   bodyElement.id = "body";
 
   for (let i = 0; i < foods.length; i++) {
+    const itemWrapper = document.createElement("div");
+    itemWrapper.className = "item";
+
+    const itemName = document.createElement("h3");
+    itemName.textContent = foods[i].name;
+    itemWrapper.appendChild(itemName);
+
     const imageWrapper = document.createElement("div");
     imageWrapper.className = "imageWrapper";
     const image = foods[i].img;
     image.style.width = "100%";
     image.style.height = "100%";
     imageWrapper.appendChild(foods[i].img);
-    bodyElement.appendChild(imageWrapper);
+    itemWrapper.appendChild(imageWrapper);
+
+    bodyElement.appendChild(itemWrapper);
   }
 
   return bodyElement;

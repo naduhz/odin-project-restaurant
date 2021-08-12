@@ -112,6 +112,10 @@ section.body.menu {
   gap: 3em;
 }
 
+.item {
+  border: 1px solid black;
+}
+
 .imageWrapper {
   max-width: 200px;
   max-height: 200px;
