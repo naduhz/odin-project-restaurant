@@ -1,6 +1,6 @@
 # Responsive Restaurant Webpage
 
-This is a rather simple Library application that uses the localStorage() for a user to manage their personal collection.
+This is a rather simple Restaurant Webpage application that uses Webpack to compile the source code.
 
 # Preview
 
